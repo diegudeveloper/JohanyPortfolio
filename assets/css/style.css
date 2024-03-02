@@ -110,11 +110,12 @@ input {
 
 /*=============== Home ===============*/
 .home {
-  height: 500px;
+  /* height: 500px; */
+  height: 330px;
   background: url(../img/home-bg.jpg);
   background-size: cover;
   background-position: 50%;
-  padding-top: 7.5rem;
+  padding-top: 1rem;
   position: relative;
 }
 
@@ -141,7 +142,8 @@ input {
 
 .home__img {
   /* width: 90%; */
-  height: 380px;
+  /* height: 380px; */
+  height: 290px;
   object-fit: cover;
   border-radius: 0.3rem;
   transform: translateY(3.125rem);
@@ -158,12 +160,12 @@ input {
 
 .home__name {
   font-size: var(--fs-h1);
-  line-height: 1.14rem;
+  line-height: 1rem;
   margin: 1.3em 0 0.60em;
 }
 
 .home__work {
-  margin-bottom: 2.5em;
+  margin-bottom: 0.8em;
 }
 
 .home__list dt {
@@ -177,11 +179,11 @@ input {
 }
 
 .home__list dd:not(:last-child) {
-  margin-bottom: 0.94em;
+  margin-bottom: 0.54em;
 }
 
 .home__socials {
-  margin: 1.25rem 0 2.2rem;
+  margin: 1rem 0 2.2rem;
 }
 
 .home__social-link {

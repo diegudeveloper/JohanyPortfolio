@@ -103,8 +103,67 @@ input {
 }
 
 /*=============== Header ===============*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav {
+  height: calc(var(--header-height) + -0.325rem);
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav__list {
+  display: flex;
+  gap: 3.25rem;
+}
+
+.nav__link {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: var(--bold);
+  font-family: var(--mono-font);
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  opacity: 0.5;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -1.rem;
+  width: 7px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+}
+
+.nav__close,
+.nav__toggle {
+  display: none;
+}
 
 /* Active Link */
+.active-link {
+  opacity: 0.5;
+}
+
+.active-link::after {
+  opacity: 1;
+}
 
 /* Scroll Header */
 
@@ -112,9 +171,11 @@ input {
 .home {
   /* height: 500px; */
   height: 330px;
-  background: url(../img/home-bg.jpg);
-  background-size: cover;
-  background-position: 50%;
+  background: url(../img/profile4.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position-y: 15%;
+  background-position-x: 50%;
   padding-top: 1rem;
   position: relative;
 }

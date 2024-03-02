@@ -105,7 +105,6 @@ input {
 .section {
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
-  /* background-color: red; */
 }
 
 .section__title {
@@ -123,6 +122,13 @@ input {
 .text-sm {
   font-size: var(--fs-sm);
   line-height: 1.43em;
+}
+
+.skills__title,
+.resume__title {
+  color: var(--text-color-alt);
+  letter-spacing: 0.4em;
+  margin-bottom: 2.8em;
 }
 
 /*=============== Header ===============*/
@@ -384,11 +390,11 @@ input {
   column-gap: 3.75rem;
 }
 
-.resume__title {
+/* .resume__title {
   color: var(--text-color-alt);
   letter-spacing: 0.4em;
   margin-bottom: 2.8em;
-}
+} */
 
 .resume__item {
   border-left: 2px solid var(--primary-color);
@@ -424,6 +430,37 @@ input {
 
 
 /*=============== Skills ===============*/
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(2, 445px);
+  column-gap: 7rem;
+}
+
+.skills__list {
+  row-gap: 1.8rem;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
+}
+
+.skills__bar {
+  background-color: var(--bg-color-alt);
+}
+
+.skills__percentage {
+  display: block;
+  background-color: var(--primary-color);
+}
+
 
 /*=============== Projects ===============*/
 

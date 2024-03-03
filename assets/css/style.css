@@ -462,7 +462,13 @@ input {
 }
 
 
-/*=============== Projects ===============*/
+/*=============== Roles ===============*/
+.services__container__roles {
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  gap: 1.875rem;
+  justify-content: center;
+}
 
 /*=============== Testimonials ===============*/
 

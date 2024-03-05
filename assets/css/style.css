@@ -685,6 +685,14 @@ position: relative;
     display: none;
   }
 
+  .home__list {
+    font-size: 0.7rem;
+  }
+
+  .home__socials {
+    margin: 0.7rem 0 2.2rem;
+  }
+
   .section {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -699,7 +707,9 @@ position: relative;
     row-gap: 3.7rem;
   }
 
- 
+ .contact__container {
+  grid-template-columns: 5fr 7fr;
+ }
 
  
 }

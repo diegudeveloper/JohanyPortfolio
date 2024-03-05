@@ -1,12 +1,35 @@
-/*=============== Background Header =============== */
-/*function scrollHeader() {
-    const header = document.getElementById('header');
-    if (this.scrollY >= 30) header.classList.add('scroll-header');
-    else header.classList.remove('scroll-header');
+/*=============== show Menu =============== */
+const navMenu = document.getElementById('nav-menu'),
+navToggle = document.getElementById('nav-toggle'),
+navClose = document.getElementById('nav-close');
+
+/*=============== show Menu =============== */
+/*=============== validate if const exists =============== */
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu')
+    });
 }
 
-window.addEventListener('scroll', scrollHeader);*/
+/*=============== Hide Show =============== */
+/*=============== validate if const exists =============== */
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu')
+    });
+}
 
+/*=============== Remove Menu Mobile =============== */
+const navLink = document.querySelectorAll('.nav__link');
+
+function linkAction() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show-menu');
+}
+
+navLink.forEach((n) => n.addEventListener('click', linkAction));
+
+/*=============== Background Header =============== */
 let lastScrollPosition = 0;
 let scrolledDown = false;
 
@@ -31,13 +54,6 @@ window.addEventListener('scroll', scrollHeader);
 
 
 
-
-
-
-
-
 /*=============== Active Link =============== */
 
 /*=============== Mixitup Filter =============== */
-
-/*=============== Testimonials Swiper =============== */

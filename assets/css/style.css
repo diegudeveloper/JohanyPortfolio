@@ -92,6 +92,7 @@ input {
 
 /*=============== Reusable Css ===============*/
 .container {
+  width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding-left: 0.9rem;
@@ -138,6 +139,7 @@ input {
   left: 0;
   width: 100%;
   z-index: 100;
+  transition: 0.3s;
 }
 
 .nav {
@@ -194,7 +196,30 @@ input {
   opacity: 1;
 }
 
-/* Scroll Header */
+/* Scroll Heade */
+
+.scroll-header {
+  position: fixed;
+  background-color: var(--bg-color);
+  box-shadow: 0 5px 8px 0 rgb(0, 0, 0 / 14%);
+}
+
+.scroll-header .nav__link {
+  color: var(--text-color);
+}
+
+.scroll-header .nav {
+  align-items: center;
+}
+
+.scroll-header .nav__link::after {
+  background-color: var(--text-color);
+}
+
+.scroll-header .nav__link:hover,
+.scroll-header .active-link {
+  color: var(--primary-color);
+}
 
 /*=============== Home ===============*/
 .home {
@@ -390,12 +415,6 @@ input {
   column-gap: 3.75rem;
 }
 
-/* .resume__title {
-  color: var(--text-color-alt);
-  letter-spacing: 0.4em;
-  margin-bottom: 2.8em;
-} */
-
 .resume__item {
   border-left: 2px solid var(--primary-color);
   padding-left: 1.6rem;
@@ -426,8 +445,6 @@ input {
   color: var(--text-color-alt);
   margin-bottom: 0.7em;
 } 
-
-
 
 /*=============== Skills ===============*/
 .skills__container {
@@ -460,7 +477,6 @@ input {
   display: block;
   background-color: var(--primary-color);
 }
-
 
 /*=============== Roles ===============*/
 .services__container__roles {
@@ -567,6 +583,13 @@ position: relative;
   box-shadow: inset 0 0 5px 0 #fff;
 }
 
+.comtact__message {
+  position: absolute;
+  bottom: 33%;
+  left: 0;
+  font-family: var(--mono-font);
+}
+
 .contact__button {
   margin-top: 1.875rem;
   width: 100%;
@@ -579,17 +602,106 @@ position: relative;
   text-align: center;
 }
 
-
-/*=============== Blog Details ===============*/
-
 /*=============== Style Switcher ===============*/
 
 /*=============== BreakPoints ===============*/
 /* for large devices */
 @media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .home__container {
+    grid-template-columns: 5fr 7fr;
+  }
+
+  .skills__container,
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.875rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    row-gap: 2.125rem;
+    text-align: center;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: block;
+  }
+
+  .nav__close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 2.7rem;
+    left: 8%;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .nav__toggle {
+    color: #fff;
+    font-size: 1.25rem;
+    opacity: 0.5;
+  }
+
+  .scroll-header .nav__toggle {
+    color: var(--text-color);
+    opacity: 1;
+  }
+
+  .home {
+    padding-top: 5.25rem;
+  }
+
+  .home__name {
+    margin: 0.3em 0 0.6em;
+    font-size: 1.8rem;
+  }
+
+  .home__img {
+    display: none;
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .resume__container,
+  .home__container {
+    grid-template-columns: 1fr;
+  }
+
+  .resume__container {
+    row-gap: 3.7rem;
+  }
+
+ 
+
+ 
 }
 
 /* for medium devices */

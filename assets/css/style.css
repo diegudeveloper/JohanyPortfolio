@@ -607,6 +607,15 @@ position: relative;
 /*=============== BreakPoints ===============*/
 /* for large devices */
 @media screen and (max-width: 1200px) {
+
+  :root {
+    --fs-h1: 2.25rem;
+    --fs-h2: 1.75rem;
+    --fs-lg: 1rem;
+    --fs-base: 0.938rem;
+    --fs-sm: 0.813rem;
+    --fs-xs: 0.687rem;
+  }
   .container {
     max-width: 960px;
   }
@@ -716,11 +725,54 @@ position: relative;
 
 /* for medium devices */
 @media screen and (max-width: 768px) {
-}
+  .container {
+    max-width: 540px;
+  }
+
+  .contact__container,
+  .skills__container,
+  .services__container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__container {
+    row-gap: 3.75rem;
+  }
+  
+  .contact__container {
+    row-gap: 3rem;
+  }
 
 @media screen and (max-width: 576px) {
+  .home {
+    padding: 4.4rem 0.5rem;
+    background-size: 100%;
+  }
+
+  .contact__container {
+    padding: 0;
+  }
 }
 
 /* for small devices */
 @media screen and (max-width: 350px) {
+  :root {
+    --fs-h1: 2rem
+  }
+
+  .home__work {
+    font-size: var(--fs-sm);
+  }
+
+  .home__list {
+    font-size: 0.875rem;
+  }
+
+  .home__list dd {
+    padding-left: 5.75em;
+  }
+
+  .home__social-link {
+    font-size: 1.3rem;
+  }
 }

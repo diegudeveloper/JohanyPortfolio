@@ -205,7 +205,8 @@ input {
 }
 
 .scroll-header .nav__link {
-  color: var(--text-color);
+  /* color: var(--text-color); */
+  color: #fff;
 }
 
 .scroll-header .nav {

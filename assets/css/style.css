@@ -223,7 +223,6 @@ input {
 
 /*=============== Home ===============*/
 .home {
-  /* height: 500px; */
   height: 330px;
   background: url(../img/profile4.png);
   background-size: 60%;
@@ -257,8 +256,6 @@ input {
 }
 
 .home__img {
-  /* width: 90%; */
-  /* height: 380px; */
   height: 290px;
   object-fit: cover;
   border-radius: 0.3rem;
@@ -602,6 +599,12 @@ position: relative;
   text-align: center;
 }
 
+.footer__copy a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /*=============== Style Switcher ===============*/
 
 .style__switcher {
@@ -774,8 +777,6 @@ position: relative;
  .contact__container {
   grid-template-columns: 5fr 7fr;
  }
-
- 
 }
 
 /* for medium devices */
@@ -797,6 +798,7 @@ position: relative;
   .contact__container {
     row-gap: 3rem;
   }
+}
 
 @media screen and (max-width: 576px) {
   .home {
